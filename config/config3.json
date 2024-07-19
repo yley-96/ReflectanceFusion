@@ -1,0 +1,53 @@
+{
+  "_class_name": "UNet2DModel",
+  "_diffusers_version": "0.20.0.dev0",
+  "act_fn": "silu",
+  "add_attention": true,
+  "attention_head_dim": 8,
+  "block_out_channels": [
+    128,
+    256,
+    512,
+    512,
+    1024,
+    1024
+  ],
+  "center_input_sample": false,
+  "class_embed_type": null,
+  "convnext_channels_mult": 4,
+  "convnext_time_embedding_activation": false,
+  "down_block_types": [
+    "ConvnextDownBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnDownBlock2D"
+  ],
+  "downsample_padding": 0,
+  "downsample_type": "conv",
+  "flip_sin_to_cos": false,
+  "freq_shift": 0,
+  "in_channels": 136,
+  "layers_per_block": 2,
+  "mid_act_fn": "gelu",
+  "mid_block_scale_factor": 1,
+  "mid_block_type": "ConvnextMidBlock2D",
+  "norm_eps": 1e-05,
+  "norm_num_groups": 32,
+  "num_class_embeds": null,
+  "out_channels": 10,
+  "resnet_time_scale_shift": "default",
+  "sample_size": 256,
+  "time_embedding_type": "positional",
+  "up_block_types": [
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnUpBlock2D",
+    "ConvnextAttnUpBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextAttnDownBlock2D",
+    "ConvnextUpBlock2D"
+  ],
+  "upsample_type": "conv",
+  "wrong_heads": true
+}
